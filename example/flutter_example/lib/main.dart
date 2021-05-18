@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ping_discover_network/ping_discover_network.dart';
-import 'package:wifi/wifi.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     String ip;
     try {
-      ip = await Wifi.ip;
+      ip = '127.0.0.1';
       print('local ip:\t$ip');
     } catch (e) {
       final snackBar = SnackBar(
